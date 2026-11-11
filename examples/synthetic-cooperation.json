@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "record_type": "synthetic",
+  "dominant_hand": "right",
+  "focus": "career",
+  "images": [
+    {
+      "id": "demoA",
+      "user_hand": "right",
+      "provider_hand": "left",
+      "mirror": "unknown",
+      "quality": "clear",
+      "view": "palm",
+      "comparable": false,
+      "observations": [
+        {
+          "id": "demo_fate",
+          "kind": "line",
+          "feature": "fate",
+          "visibility": "clear",
+          "basis": "observed",
+          "geometry": {"start": "moon_region", "end": "middle_base", "continuity": "continuous"}
+        },
+        {
+          "id": "demo_sun",
+          "kind": "line",
+          "feature": "sun",
+          "visibility": "clear",
+          "basis": "observed",
+          "geometry": {"start": "fate_line", "end": "ring_base"}
+        }
+      ]
+    }
+  ]
+}

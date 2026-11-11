@@ -1,0 +1,825 @@
+{
+  "version": "0.2.0",
+  "rules": [
+    {
+      "id": "L01",
+      "kind": "line",
+      "feature": "life",
+      "when": {},
+      "topic": "general",
+      "theme": "生活的底盘",
+      "text": "这条弧线承担生活基础的意象，读法重在底盘与其他路径怎样衔接。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF41、54—60"
+      },
+      "priority": 10
+    },
+    {
+      "id": "L02",
+      "kind": "line",
+      "feature": "head",
+      "when": {},
+      "topic": "general",
+      "theme": "构思怎样展开",
+      "text": "这条横斜线承担构思如何展开的意象，具体重心由走向与连接决定。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF41—42、60—64"
+      },
+      "priority": 10
+    },
+    {
+      "id": "L03",
+      "kind": "line",
+      "feature": "heart",
+      "when": {},
+      "topic": "relationships",
+      "theme": "关系中的联结",
+      "text": "这条上部横纹承担关系联结的主题，终点与支线决定这层象意怎样展开。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF42、65—70"
+      },
+      "priority": 10
+    },
+    {
+      "id": "L04",
+      "kind": "line",
+      "feature": "fate",
+      "when": {},
+      "topic": "career",
+      "theme": "事业的主线",
+      "text": "朝中指方向的纵纹承担事业主轴的意象，起点与连接决定这条路从哪里长出来。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF42、70—72"
+      },
+      "priority": 20
+    },
+    {
+      "id": "L05",
+      "kind": "line",
+      "feature": "sun",
+      "when": {},
+      "topic": "career",
+      "theme": "呈现与被看见",
+      "text": "朝无名指根下的线承担作品、呈现和认可的意象，与事业主线合看最有信息。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF43、73—74"
+      },
+      "priority": 20
+    },
+    {
+      "id": "F01",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "start": "life_line"
+      },
+      "topic": "career",
+      "theme": "从已有积累中起势",
+      "text": "这是一条从积累里长出的路：已有基础接入事业主轴，重心在承接与生长。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF71右，例86、图181"
+      },
+      "priority": 80
+    },
+    {
+      "id": "F02",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "start": "moon_region"
+      },
+      "topic": "career",
+      "theme": "借外缘形成事业",
+      "text": "这是一种借势成路的象：先接住外部机会与合作，再逐步形成事业的主轴。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF71右—72左，例89、图184"
+      },
+      "priority": 80
+    },
+    {
+      "id": "F03",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "double": true
+      },
+      "topic": "career",
+      "theme": "并行的路径",
+      "text": "两条清楚的纵向路径并行，象意里容得下两路推进；还要看两路怎样衔接、各自走向哪里。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF71右，例87、图182"
+      },
+      "priority": 70
+    },
+    {
+      "id": "F04",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "continuity": "gap",
+        "gap_confirmed": true,
+        "overlap": false
+      },
+      "topic": "career",
+      "theme": "阶段性的切换",
+      "text": "这条路的象里有分段、有转折，读法要分前后承接，尤其要看中断附近有没有重新接起的路径。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF71右—72左，例88、90、图183、185"
+      },
+      "priority": 75
+    },
+    {
+      "id": "F05",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "continuity": "continuous"
+      },
+      "topic": "career",
+      "theme": "主线的延续",
+      "text": "这段线连贯，象意偏向主轴的延续；起点与辅线会补充它靠什么向前。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF70右，例83—84"
+      },
+      "priority": 35
+    },
+    {
+      "id": "S01",
+      "kind": "line",
+      "feature": "sun",
+      "when": {
+        "start": "life_line"
+      },
+      "topic": "career",
+      "theme": "积累走向呈现",
+      "text": "积累接到了呈现上，象意像是经验慢慢长成作品，再逐渐被看见。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF73左—右，例97、图192"
+      },
+      "priority": 75
+    },
+    {
+      "id": "S02",
+      "kind": "line",
+      "feature": "sun",
+      "when": {
+        "start": "fate_line"
+      },
+      "topic": "career",
+      "theme": "做事与呈现相连",
+      "text": "做事与被看见接在一条路上：事业主轴向前走，呈现与认可随之展开。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF73右，例98、图193"
+      },
+      "priority": 85
+    },
+    {
+      "id": "S03",
+      "kind": "line",
+      "feature": "sun",
+      "when": {
+        "start": "head_line"
+      },
+      "topic": "career",
+      "theme": "构思走向作品",
+      "text": "构思接到了呈现上，象意集中在把想法做成文字、内容或作品。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF74右，例104、图199"
+      },
+      "priority": 75
+    },
+    {
+      "id": "S04",
+      "kind": "line",
+      "feature": "sun",
+      "when": {
+        "start": "heart_line"
+      },
+      "topic": "career",
+      "theme": "关系与呈现相连",
+      "text": "关系与呈现接在一起，读法重在人与人之间的联结，怎样进入表达和被看见的路径。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF73右—74左，例100、图195"
+      },
+      "priority": 70
+    },
+    {
+      "id": "H01",
+      "kind": "line",
+      "feature": "head",
+      "when": {
+        "direction": "descending_outer"
+      },
+      "topic": "general",
+      "theme": "向内展开的构思",
+      "text": "向小指侧下斜的走势，在传统图式里接向构思、想象与内在世界，象意更有向里展开的画面。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF60—64"
+      },
+      "priority": 45
+    },
+    {
+      "id": "H02",
+      "kind": "line",
+      "feature": "head",
+      "when": {
+        "direction": "transverse"
+      },
+      "topic": "general",
+      "theme": "横向铺开的构思",
+      "text": "图形以横向展开为主，象意像把事情摊开、逐项铺陈，重心在展开的过程。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF41—42、60—64"
+      },
+      "priority": 40
+    },
+    {
+      "id": "P01",
+      "kind": "line",
+      "feature": "life",
+      "when": {
+        "upward_branch": true
+      },
+      "topic": "general",
+      "theme": "从基础向外伸展",
+      "text": "向上的支线把已有底盘向外延展，象意重在基础之上再生出一个出口。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF47—49"
+      },
+      "priority": 35
+    },
+    {
+      "id": "P02",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "upward_branch": true
+      },
+      "topic": "career",
+      "theme": "主线向外伸展",
+      "text": "事业主轴向上生出支线，象意是主路逐渐有了延展与新的出口。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF47—49"
+      },
+      "priority": 40
+    },
+    {
+      "id": "P03",
+      "kind": "line",
+      "feature": "sun",
+      "when": {
+        "double": true
+      },
+      "topic": "career",
+      "theme": "多处呈现",
+      "text": "呈现有不止一个出口，需要看各线起点，分清是同一路的延展还是彼此独立。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF73—74，图196"
+      },
+      "priority": 45
+    },
+    {
+      "id": "R01",
+      "kind": "line",
+      "feature": "heart",
+      "when": {
+        "continuity": "continuous"
+      },
+      "topic": "relationships",
+      "theme": "关系主题的延续",
+      "text": "当前可见部分连贯，关系主题在象意上有延续和连接的主调。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF42、65—70"
+      },
+      "priority": 35
+    },
+    {
+      "id": "R02",
+      "kind": "line",
+      "feature": "heart",
+      "when": {
+        "upward_branch": true
+      },
+      "topic": "relationships",
+      "theme": "关系向外延展",
+      "text": "关系主题生出向上的支线，象意是联结向外延展，再看支线具体走向哪一区域。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF47—49、65—70"
+      },
+      "priority": 40
+    },
+    {
+      "id": "Y01",
+      "kind": "symbol",
+      "feature": "triangle",
+      "when": {
+        "independent": true,
+        "closed": true,
+        "edge_count": 3
+      },
+      "topic": "general",
+      "theme": "局部结构的聚合",
+      "text": "已经认出独立三边结构；这一步先抓住局部聚合的形态，下一层由所在区域和主线配合决定。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF49右、51—52"
+      },
+      "priority": 15
+    },
+    {
+      "id": "Y02",
+      "kind": "symbol",
+      "feature": "square",
+      "when": {
+        "independent": true,
+        "closed": true,
+        "edge_count": 4
+      },
+      "topic": "general",
+      "theme": "围合与承接",
+      "text": "独立四边结构带出围合与承接的意象，具体落点由它所在的位置和相关主线决定。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF50—52"
+      },
+      "priority": 15
+    }
+  ],
+  "combinations": [
+    {
+      "id": "C01",
+      "requires": [
+        "F02",
+        "S02"
+      ],
+      "minimum_observations": 2,
+      "text": "这组象的主调是：靠合作打开局面，再把做出的东西带到人前。玉柱线从月丘起，传统上先看外部机会；太阳线又从它接出去，便把做事和被看见连在了一起。接下来读得更细，要看这两处怎样衔接。"
+    },
+    {
+      "id": "C02",
+      "requires": [
+        "F01",
+        "S02"
+      ],
+      "minimum_observations": 2,
+      "text": "这组象讲的是：先有积累，再把成果做出来。玉柱线从生命线起，太阳线又接在它上面，前面的基础和后面的呈现连在了一起。读这组象，要看已有积累怎样托起下一步。"
+    },
+    {
+      "id": "C03",
+      "requires": [
+        "F04",
+        "S02"
+      ],
+      "minimum_observations": 2,
+      "text": "这组象有转折，也有接续。事业主线分了段，太阳线还和它相连，可以读成：中间换一程，后面还有做出成果的空间。最关键的是前后两段怎样接，接头没看清，就先不把转折说成具体年份和事情。"
+    },
+    {
+      "id": "C04",
+      "requires": [
+        "F03",
+        "S02"
+      ],
+      "minimum_observations": 2,
+      "text": "这组象先看两条路并着走，再看成果接在哪条路上。两路各有走向，太阳线具体接在哪一支，会改变下一层读法。这个接头值得先看清。"
+    },
+    {
+      "id": "C05",
+      "requires": [
+        "F02",
+        "S02",
+        "F05"
+      ],
+      "minimum_observations": 2,
+      "text": "这组象的主调是：靠合作打开局面，沿着一件事持续做，慢慢做出自己的招牌。玉柱线从月丘起，传统上先看外部机会；中间清楚的部分连贯，带着接续往前走的意思；太阳线再从它接出去，就把做事和被看见连在了一起。合起来看，是先借力起步，再把成果做出来。"
+    }
+  ],
+  "terms": [
+    {
+      "term": "智慧纹",
+      "context": "appendix_one",
+      "meaning": "太阳线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF98—99，附录一第19式"
+      }
+    },
+    {
+      "term": "智慧纹",
+      "context": "appendix_two",
+      "meaning": "头脑线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF145—149"
+      }
+    },
+    {
+      "term": "事业线",
+      "context": "main",
+      "meaning": "玉柱线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF42"
+      }
+    },
+    {
+      "term": "事业线",
+      "context": "essay",
+      "meaning": "天纹的类比用名",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF11"
+      }
+    },
+    {
+      "term": "婚姻线",
+      "context": "main",
+      "meaning": "小指侧结合线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF44—45、77—78"
+      }
+    },
+    {
+      "term": "婚姻线",
+      "context": "essay",
+      "meaning": "人纹的类比用名",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF11"
+      }
+    },
+    {
+      "term": "川字纹",
+      "context": "appendix_one",
+      "meaning": "指节小竖纹束",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF103，第27式"
+      }
+    },
+    {
+      "term": "四季纹",
+      "context": "appendix_one",
+      "meaning": "气色类别",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF88"
+      }
+    },
+    {
+      "term": "三峰纹",
+      "context": "appendix_one",
+      "meaning": "掌丘形态",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF90"
+      }
+    },
+    {
+      "term": "福厚纹",
+      "context": "appendix_one",
+      "meaning": "掌丘形态",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF109"
+      }
+    },
+    {
+      "term": "四角形",
+      "context": "symbols",
+      "meaning": "独立短线四边形",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF50—52"
+      }
+    },
+    {
+      "term": "四角形",
+      "context": "line_spacing",
+      "meaning": "感情线与头脑线之间的区域",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF52右"
+      }
+    },
+    {
+      "term": "亡神纹",
+      "context": "appendix_one",
+      "meaning": "天人线合一的古称",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF124，第64式"
+      }
+    },
+    {
+      "term": "智能线",
+      "context": "main",
+      "meaning": "头脑线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF41—42"
+      }
+    },
+    {
+      "term": "成功线",
+      "context": "main",
+      "meaning": "太阳线",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF43"
+      }
+    }
+  ],
+  "observation_order": [
+    "整体轮廓",
+    "指掌配合",
+    "手指与指节",
+    "宫丘位置",
+    "主线",
+    "辅线",
+    "独立符号",
+    "双手比较"
+  ],
+  "hand_type_schemes": [
+    {
+      "id": "five_elements",
+      "types": [
+        "金",
+        "木",
+        "土",
+        "水",
+        "火"
+      ],
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF19—21"
+      },
+      "use": "先记录轮廓、比例，不由形分类推定人格或职业"
+    },
+    {
+      "id": "western_seven",
+      "types": [
+        "原始",
+        "方",
+        "结节",
+        "扁平",
+        "圆锥",
+        "尖头",
+        "复杂"
+      ],
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF21—23"
+      },
+      "use": "与五型并列，不强行互相换算"
+    },
+    {
+      "id": "appendix_six",
+      "types": [
+        "方",
+        "椭圆",
+        "三角",
+        "窄凹",
+        "削尖",
+        "尖薄"
+      ],
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF130—132"
+      },
+      "use": "需要注明附录二语境，不能假装是同一分类"
+    }
+  ],
+  "regions": [
+    {
+      "id": "jupiter",
+      "body_relative_location": "食指根下",
+      "palace": "巽",
+      "mount": "木星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "saturn",
+      "body_relative_location": "中指根下",
+      "palace": "离",
+      "mount": "土星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "sun",
+      "body_relative_location": "无名指根下",
+      "palace": "坤前半",
+      "mount": "太阳丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "mercury",
+      "body_relative_location": "小指根下",
+      "palace": "坤后半",
+      "mount": "水星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "mars_first",
+      "body_relative_location": "拇指侧上部",
+      "palace": "震",
+      "mount": "第一火星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "venus",
+      "body_relative_location": "拇指根部隆起范围",
+      "palace": "艮及半坎",
+      "mount": "金星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "mars_second",
+      "body_relative_location": "小指侧中部",
+      "palace": "兑",
+      "mount": "第二火星丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "moon",
+      "body_relative_location": "小指侧下部",
+      "palace": "乾及半坎",
+      "mount": "月丘",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    },
+    {
+      "id": "plain",
+      "body_relative_location": "掌中央",
+      "palace": "明堂",
+      "mount": "火星平原",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF33图39/40、PDF40图50"
+      }
+    }
+  ],
+  "line_forms": [
+    "姊妹",
+    "分叉",
+    "流苏",
+    "上行支线",
+    "下行支线",
+    "链状",
+    "中断",
+    "波状",
+    "毛状"
+  ],
+  "symbol_forms": [
+    "星",
+    "十字",
+    "正方",
+    "岛",
+    "圆环",
+    "三角",
+    "格子",
+    "三脚架",
+    "锋尖",
+    "斑点"
+  ],
+  "auxiliary_lines": [
+    "火星",
+    "健康",
+    "结合",
+    "痴情",
+    "保险",
+    "直感",
+    "旅行",
+    "金星带",
+    "水星"
+  ],
+  "conflicts": [
+    {
+      "id": "X01",
+      "topic": "健康线含义",
+      "sources": [
+        {
+          "id": "chen-1994",
+          "locator": "PDF43、75 正文"
+        },
+        {
+          "id": "chen-1994",
+          "locator": "PDF155左 附录二"
+        }
+      ],
+      "resolution": "保留相反主张，不用于个人疾病判断"
+    },
+    {
+      "id": "X02",
+      "topic": "第一/第二火星丘积极与消极含义",
+      "sources": [
+        {
+          "id": "chen-1994",
+          "locator": "PDF36、38 正文"
+        },
+        {
+          "id": "chen-1994",
+          "locator": "PDF137右 附录二"
+        }
+      ],
+      "resolution": "位置可对照，性情归属不统一"
+    },
+    {
+      "id": "X03",
+      "topic": "双手与男左女右等流派",
+      "sources": [
+        {
+          "id": "chen-1994",
+          "locator": "PDF16、32 正文"
+        },
+        {
+          "id": "chen-1994",
+          "locator": "PDF146右 附录二"
+        }
+      ],
+      "resolution": "本人标注手别，双手分别看后比较；不由性别删掉一手"
+    },
+    {
+      "id": "X04",
+      "topic": "结合线条数",
+      "sources": [
+        {
+          "id": "chen-1994",
+          "locator": "PDF77 正文"
+        },
+        {
+          "id": "chen-1994",
+          "locator": "PDF121 附录一"
+        }
+      ],
+      "resolution": "不把数量等同婚次"
+    },
+    {
+      "id": "X05",
+      "topic": "时间量尺",
+      "sources": [
+        {
+          "id": "chen-1994",
+          "locator": "PDF78 正文"
+        },
+        {
+          "id": "chen-1994",
+          "locator": "PDF132 附录二"
+        }
+      ],
+      "resolution": "未形成可重复统一量尺，不输出个人事件年龄"
+    }
+  ],
+  "inference_limits": [
+    "不从皮纹推定智力、稳定人格、疾病、忠贞、犯罪或宗教",
+    "不换算寿命、婚次、收入或具体日期",
+    "无须出生资料或真实姓名",
+    "模糊不等于没有",
+    "不以八字、经历和用户期待补造纹路"
+  ],
+  "rule_scope": "23条活动规则＋5种组合语法；整书形态图组另存figure_forms.json。图组归纳不等于自动识图或预测断语全部启用。"
+}

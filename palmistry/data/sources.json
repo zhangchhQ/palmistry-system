@@ -1,0 +1,107 @@
+{
+  "checked_on": "2026-11-11",
+  "sources": [
+    {
+      "id": "chen-1994",
+      "type": "user-provided-local-copyrighted-scan",
+      "title": "掌相入门",
+      "author": "陈鼎龙",
+      "publisher": "新疆大学出版社",
+      "edition": "1994年10月第1版、第1次印刷",
+      "isbn": "7-5631-0534-4",
+      "pdf_pages": 169,
+      "pdf_sha256": "52e46ba27bb8fdcfaaa0761a3fed3cd96fdd5fb8a3a9620a7d240733418a05e1",
+      "text_reading": "全部OCR页已读，OCR有误字",
+      "visual_review": "全部169个文件页图已实际看过；关键部位另以原分辨率核对；局部黑条遮挡不补画，图组不当作真实案例",
+      "distribution": "不包含扫描、OCR、原图与逐条全书替代品",
+      "additional_visual_review_20261111": [
+        47,
+        48,
+        61,
+        64,
+        72,
+        74
+      ],
+      "all_pdf_pages_visually_reviewed": true,
+      "diagram_catalogue": "按命名空间建立516个编号图组和514个形态记录；图号含子图/重绘，非独立真实案例数"
+    },
+    {
+      "id": "zhouyi-table",
+      "type": "classical-text-transcription",
+      "url": "https://zh.wikisource.org/zh-hans/周易",
+      "locator": "六十四卦速查表；页面表格按下卦为行、上卦为列，本实现显式转置",
+      "use": "核对卦名序号及上下卦；未复制现代导论"
+    },
+    {
+      "id": "shuogua",
+      "type": "classical-primary-text",
+      "url": "https://zh.wikisource.org/zh-hant/周易/說卦",
+      "locator": "第二、五、七、十一章",
+      "use": "阴阳六位、方位、八卦取象；不采用其中身体疾病推断"
+    },
+    {
+      "id": "hongfan",
+      "type": "classical-primary-text",
+      "url": "https://zh.wikisource.org/zh-hant/尚書/洪範",
+      "locator": "五行段",
+      "use": "五行名称与象义基础；不把此篇说成八卦五行配表"
+    },
+    {
+      "id": "baihutong",
+      "type": "classical-primary-text",
+      "url": "https://www.shidianguji.com/zh/book/HY6731/chapter/1lmjep16vgn55",
+      "locator": "五行篇，相生/相害段",
+      "use": "核对相生与相克方向"
+    },
+    {
+      "id": "mediapipe-hands",
+      "type": "official-technical-document",
+      "url": "https://chuoling.github.io/mediapipe/solutions/hands.html",
+      "locator": "21 landmarks与multi_handedness",
+      "use": "界定可选视觉工具能力与镜像约定；未安装/调用其模型"
+    },
+    {
+      "id": "codex-skills",
+      "type": "official-technical-document",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "locator": "技能结构及本地加载范围",
+      "use": "打包可复用流程；不等于微调模型"
+    },
+    {
+      "id": "yu-lecture-excerpt",
+      "type": "publisher-primary-lecture-notes",
+      "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/073777-01.pdf",
+      "read_scope": "PDF16—21、58",
+      "use": "术语拆解、情境解释、时位和条件的表达；不复制全文或采用其健康政治主张"
+    },
+    {
+      "id": "zengshan-expression",
+      "type": "classical-case-text",
+      "url": "https://zh.wikisource.org/zh-hans/增刪卜易",
+      "read_scope": "反伏/旬空附近案例，网页1139—1253行",
+      "use": "学习断语如何连接问题、关键条件和判断；没有据此实现纳甲新算法"
+    },
+    {
+      "id": "cui-expression",
+      "type": "creator-site-editorial-article",
+      "url": "https://cuizhiqian.com/articles/147",
+      "read_scope": "全文文章及FAQ；不是本人现场视频转写",
+      "use": "观察口语取象、条件转折，收益健康夸张不作为判断依据"
+    },
+    {
+      "id": "kanxiang-reference",
+      "type": "public-repository-readme",
+      "url": "https://github.com/tenpai-ai/kanxiang/blob/main/README.md",
+      "read_scope": "README流程与示例",
+      "use": "只读比较，未安装/未复制代码"
+    },
+    {
+      "id": "chinese-fortune-reference",
+      "type": "public-repository-document",
+      "url": "https://github.com/ShousenZHANG/chinese-fortune/blob/main/references/10-shouxiang.md",
+      "read_scope": "44行全文",
+      "use": "只读比较术语和语境规范，未安装/未复制代码"
+    }
+  ],
+  "code_license": "尚未选择对外分发许可证；原书不因项目创建而取得再分发权"
+}

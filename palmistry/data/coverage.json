@@ -1,0 +1,154 @@
+{
+  "version": "0.2.0",
+  "whole_book_implemented": false,
+  "whole_book_text_reviewed": true,
+  "all_figures_visually_verified": false,
+  "chapters": [
+    {
+      "unit": "前置论文",
+      "pages": "8—12",
+      "implemented": [
+        "上下卦计算",
+        "五组线卦类比",
+        "观/晋分支"
+      ],
+      "unresolved": [
+        "类比不是统一起卦算法"
+      ]
+    },
+    {
+      "unit": "第一章 概论",
+      "pages": "13—15",
+      "implemented": [
+        "传统主张与可观察事实分层"
+      ],
+      "unresolved": [
+        "历史科学性断言未独立验证"
+      ]
+    },
+    {
+      "unit": "第二章 观察法",
+      "pages": "16—18",
+      "implemented": [
+        "观察顺序",
+        "双手与姿态",
+        "缺失视角门"
+      ],
+      "unresolved": [
+        "真人识图未盲测"
+      ]
+    },
+    {
+      "unit": "第三章 掌型与手指",
+      "pages": "19—32",
+      "implemented": [
+        "三套分类不混用",
+        "指掌形态词表"
+      ],
+      "unresolved": [
+        "未实现自动形状测量；性格职业断语不作个人事实"
+      ]
+    },
+    {
+      "unit": "第四章 九宫九丘",
+      "pages": "33—40",
+      "implemented": [
+        "九个区域映射",
+        "本人身体相对定位"
+      ],
+      "unresolved": [
+        "单正面照不能测丘高低；火星含义冲突"
+      ]
+    },
+    {
+      "unit": "第五章 掌线",
+      "pages": "41—49",
+      "implemented": [
+        "五条主线位置门",
+        "九辅线词表",
+        "线形语法",
+        "平行副线不强命名",
+        "主线及辅线图形入目录；玉柱/太阳短线方向门"
+      ],
+      "unresolved": [
+        "全部辅线自动识别未实现；真人照片视角未盲测"
+      ]
+    },
+    {
+      "unit": "第六章 符号",
+      "pages": "49—54",
+      "implemented": [
+        "独立三角/四方",
+        "十字/星交点",
+        "线内岛形",
+        "主线围区分离"
+      ],
+      "unresolved": [
+        "其他符号仅描述，未套统一吉凶"
+      ]
+    },
+    {
+      "unit": "第七章 164例",
+      "pages": "54—86",
+      "implemented": [
+        "起点/终点/连续/并行组合",
+        "玉柱与太阳主要变体",
+        "推断禁用门",
+        "164例逐项形态与图号定位，图201无例号另列"
+      ],
+      "unresolved": [
+        "164例未全部转换成可执行匹配规则；诊病人格等断语不启用",
+        "PDF80局部遮挡笔画未决"
+      ]
+    },
+    {
+      "unit": "附录一 72式",
+      "pages": "87—129左",
+      "implemented": [
+        "图/诀/作者注分层",
+        "智慧纹/川字纹/四季纹等消歧",
+        "独立符号门",
+        "72式逐项形态定义与页/左右半版定位"
+      ],
+      "unresolved": [
+        "不自动识别72式；少量满足形态条件的古名可映射"
+      ]
+    },
+    {
+      "unit": "附录二 手相宝库",
+      "pages": "129右—167左",
+      "implemented": [
+        "六型组合语境",
+        "术语与正文隔离",
+        "左右/健康/火星/婚次数量冲突",
+        "174编号图逐项形态摘要与位置定位；重复扫描去重计数"
+      ],
+      "unresolved": [
+        "掌背和指节图需相应视角；未做自动识图或逐笔画标注"
+      ]
+    },
+    {
+      "unit": "后记/版权",
+      "pages": "167右—169",
+      "implemented": [
+        "版本定位",
+        "征稿指令不执行",
+        "源文件不发布"
+      ],
+      "unresolved": []
+    }
+  ],
+  "validation_scopes": {
+    "deterministic_calculation": "64卦与384单爻变换测试通过，见VALIDATION.md",
+    "rule_replay": "合成输入可测",
+    "real_photo_line_recognition": "NOT_TESTED",
+    "unseen_case_narrative_quality": "NOT_TESTED",
+    "prediction_accuracy": "NOT_VALIDATED"
+  },
+  "all_file_pages_visually_reviewed": true,
+  "reviewed_pdf_pages": 169,
+  "all_numbered_diagram_groups_catalogued": true,
+  "numbered_diagram_groups": 516,
+  "shape_records": 514,
+  "visual_verification_meaning": "169个文件页均已看图；不代表被遮挡笔画、每个子图与自动识别均已验。PDF80上方遮挡另记。"
+}

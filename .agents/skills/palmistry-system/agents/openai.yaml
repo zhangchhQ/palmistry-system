@@ -1,0 +1,4 @@
+interface:
+  display_name: "观掌手相系统"
+  short_description: "核对双手可见形态，执行组合规则，生成清楚的传统象征解读。"
+  default_prompt: "使用 $palmistry-system 核对手部照片，再依据可见形态完成白话解读。"
