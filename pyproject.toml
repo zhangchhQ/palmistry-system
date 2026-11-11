@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "palmistry-system"
-version = "0.2.0"
+version = "0.3.0"
 description = "可复核的掌纹观察、传统象征组合与易学基础工具"
 requires-python = ">=3.11"
 dependencies = []

@@ -1,0 +1,332 @@
+{
+  "version": "0.3.0",
+  "purpose": "完整作者案例、原课与原书主题的学习入口；不接收个人照片或生成个人事实。",
+  "counts": {
+    "historical_author_accounts": 2,
+    "original_lesson_units_transcript_read": 2,
+    "shape_examples": 6,
+    "doctrine_topics": 6,
+    "prospective_client_readings_verified": 0
+  },
+  "cases": [
+    {
+      "id": "H01",
+      "title": "Kitchener整手组合解读",
+      "class": "historical-author-recollection",
+      "source_id": "cheiro-1916",
+      "url": "https://www.gutenberg.org/cache/epub/20480/pg20480-images.html#INTRODUCTION",
+      "read_scope": "Introduction xv–xviii，相关条件章16–20、50–55、61–65、127–131；署名整手印已看",
+      "image_locator": "同书印刷第2页署名右手印；仅链接，不分发",
+      "image_url": "https://www.gutenberg.org/cache/epub/20480/images/fig032.jpg",
+      "observed_by_author": [
+        "手指与拇指配合",
+        "横向头脑线",
+        "命运线改向食指方向",
+        "太阳线从生命线附近上行"
+      ],
+      "combination_method": "作者先讲整手背景，再讲主线互相配合，最后处理起点与改向。命运线改向与本线另生支线分开。",
+      "historical_claim": "作者将这些形态与执行、统辖及成名轨迹联系，使用已知履历作回忆叙述。",
+      "counter_condition": "不能把清楚命运线直接等同成功；作者另看太阳线及整手配合。",
+      "evidence_limit": "单手印、事后回忆；没有同期完整问答、事前可核预言记录或失败样本。",
+      "personal_inference": false
+    },
+    {
+      "id": "H02",
+      "title": "Bernhardt整手背景改变同类线形解释",
+      "class": "historical-author-recollection-cross-volume-image",
+      "source_id": "cheiro-1912",
+      "url": "https://archive.org/details/cheirosmemoirsre0000chei",
+      "read_scope": "Cheiro’s Memoirs 1912，第VI章39–46；原版46页另核；相关整手图另见1897版本",
+      "readable_text_url": "https://www.victoriainstitutions.com/books/read.php?book=memoirs",
+      "image_locator": "Language of the Hand，第IX版，1897，Plate XXVII；与1912叙述跨书配对",
+      "image_url": "https://archive.org/download/b28096563/page/n242.jpg",
+      "original_page_url": "https://archive.org/download/cheirosmemoirsre0000chei/page/n63.jpg",
+      "observed_by_author": [
+        "圆润掌形与渐尖指",
+        "清楚的主要线条",
+        "由掌根向中指、无名指方向上行的纵线",
+        "横向头脑线"
+      ],
+      "combination_method": "作者提出反事实：相似线形放到方掌、方或钝指端，解释领域随整手背景变化。",
+      "historical_claim": "作者把该整手组合与艺术表达联系；承认参照已知事业。",
+      "counter_condition": "相同线形不固定等于同一种职业；整手背景与修饰项必须保留。",
+      "evidence_limit": "成名后回忆，非同期问答；1912扫描未定位到对应掌图，不能写成同页图文完整。",
+      "personal_inference": false
+    }
+  ],
+  "lessons": [
+    {
+      "id": "L01",
+      "title": "Simian Line and the Shape of the Hand Meanings in Palmistry",
+      "author": "Sari Puhakka / Destiny Palmistry",
+      "class": "original-author-published-unit",
+      "source_id": "sari-lesson-2",
+      "course_index_url": "https://destinypalmistry.com/palmistry-video-list-by-sari-a-puhakka/",
+      "url": "https://www.youtube.com/watch?v=aw0JkB0RR-U",
+      "duration_seconds": 283,
+      "read_scope": "0:00–4:43全自动英语字幕；作者官网Playlist 6第2项直链；仅此Part 2，非全系列",
+      "transcript_kind": "YouTube auto-generated English; terminology may be wrong",
+      "continuous_video_watched": false,
+      "all_slide_details_verified": false,
+      "methods": [
+        {
+          "time": "0:14–0:58",
+          "method": "先列同一纹形、手形、指长和惯用手，再组织解释。"
+        },
+        {
+          "time": "1:02–2:03",
+          "method": "改变整手背景，保留减弱或相反条件。"
+        },
+        {
+          "time": "2:07–2:36",
+          "method": "把手指与全手厚薄作为附加条件，不把单纹直接当全部结论。"
+        },
+        {
+          "time": "3:08–3:15",
+          "method": "当场澄清左右手与惯用手的分类口径。"
+        },
+        {
+          "time": "3:23–4:04",
+          "method": "最后查主要掌丘修饰项，记录实际有依据的加减。"
+        }
+      ],
+      "evidence_limit": "读取完整发布单元字幕，未连续听音轨、观看全片或逐图核验；作者人格、能力和健康等主张不是个人测量。",
+      "personal_inference": false
+    },
+    {
+      "id": "L02",
+      "title": "Hand Reading / Learn Palmistry免费教学册",
+      "author": "Sari Puhakka",
+      "class": "author-teaching-booklet-not-video",
+      "source_id": "sari-booklet",
+      "url": "https://destinypalmistry.com/wp-content/uploads/2019/09/hand-reading-tips-new.pdf",
+      "read_scope": "物理页1–13提取文本全部读；未逐页视觉核图",
+      "method": "作者讨论缺少某线仍可能有相应生活表现，用于学习反例与限制单一线形的解释力度。",
+      "evidence_limit": "不能拿教学册代替视频观看记录；不采纳个人性格、健康、财富与人生事件事实推断。",
+      "personal_inference": false
+    },
+    {
+      "id": "L03",
+      "title": "Your Fate Line is Broken | Here's What Palmistry Says",
+      "author": "Sari Puhakka / Destiny Palmistry",
+      "class": "original-author-published-unit",
+      "source_id": "sari-fate-broken",
+      "course_index_url": "https://destinypalmistry.com/palmistry-video-list-by-sari-a-puhakka/",
+      "url": "https://www.youtube.com/watch?v=ralXvqzeDXU",
+      "duration_seconds": 492,
+      "read_scope": "作者官网Playlist 3第3项；完整可用英语自动字幕0:04–8:02，主体约至7:40；未连续看完整视频或核所有图示",
+      "transcript_kind": "YouTube auto-generated English; fate可误为faith/fat；4:03–4:21作者当场将heart改正为head",
+      "continuous_video_watched": false,
+      "all_slide_details_verified": false,
+      "methods": [
+        {
+          "time": "0:23–2:11",
+          "method": "先澄清线名与真实职业不是同一对象，用反例限制一线一结果。"
+        },
+        {
+          "time": "4:30–5:18",
+          "method": "断开须查搭接与移位，描述连接后才提出传统解释。"
+        },
+        {
+          "time": "5:21–5:58",
+          "method": "真正空缺与搭接分开；改变可以主动发生，不能把空缺固定为被动失业。"
+        },
+        {
+          "time": "6:03–7:06",
+          "method": "横切痕要配合主线是否继续，不凭一处交叉给结局。"
+        },
+        {
+          "time": "7:08–7:27",
+          "method": "复杂标记继续查后段，按局部变化、后续延展、收窄解释的顺序说明。"
+        }
+      ],
+      "evidence_limit": "仅证实完整可用字幕阅读；传统象征不能确认个人真实转职、失业、成家、财富或具体年份。",
+      "personal_inference": false
+    }
+  ],
+  "shape_examples": [
+    {
+      "id": "S086",
+      "form_id": "E086",
+      "source_id": "chen-1994",
+      "locator": "PDF71右，例86、图181",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "玉柱线明确从生命线发出"
+      ],
+      "traditional_reading": "作者将起点联系到自身努力与事业发展。",
+      "counter_condition": "起点未见、仅在附近经过或同图另一条线起点不同，均不满足该图条件。",
+      "personal_inference": false
+    },
+    {
+      "id": "S089",
+      "form_id": "E089",
+      "source_id": "chen-1994",
+      "locator": "PDF71右—72左，例89、图184",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "玉柱线明确起于月丘"
+      ],
+      "traditional_reading": "作者将这一来路联系到借助外部力量。",
+      "counter_condition": "不能用本人已知合作经历填补掌线起点。",
+      "personal_inference": false
+    },
+    {
+      "id": "S088",
+      "form_id": "E088",
+      "source_id": "chen-1994",
+      "locator": "PDF71右，例88、图183",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "玉柱弯曲或间断，间断已排除遮挡搭接"
+      ],
+      "traditional_reading": "作者把形态波折联系到事业反复，并附带努力程度解释。",
+      "counter_condition": "努力程度属于作者动机归因，不由纹理认定；横纹穿过不等于中断。",
+      "personal_inference": false
+    },
+    {
+      "id": "S090",
+      "form_id": "E090",
+      "source_id": "chen-1994",
+      "locator": "PDF71右—72左，例90、图185",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "玉柱有清楚中断"
+      ],
+      "traditional_reading": "作者将中断联系到阶段变化。",
+      "counter_condition": "本条没有提供可重复的日历映射，不能直接报某年变化。",
+      "personal_inference": false
+    },
+    {
+      "id": "S103",
+      "form_id": "E103",
+      "source_id": "chen-1994",
+      "locator": "PDF74右，例103、图198",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "太阳线明确起于生命线",
+        "其他部分另满足作者的技术性手形前提"
+      ],
+      "traditional_reading": "作者把完整配合联系到美术事业。",
+      "counter_condition": "不能省去其他部分的配合，更不能单凭一线判职业天赋。",
+      "personal_inference": false
+    },
+    {
+      "id": "S104",
+      "form_id": "E104",
+      "source_id": "chen-1994",
+      "locator": "PDF74右，例104、图199",
+      "class": "shape-example-not-client-reading",
+      "conditions": [
+        "头脑线向小指侧下斜",
+        "太阳线确实从这条头脑线发出"
+      ],
+      "traditional_reading": "作者把组合联系到诗文、想象类事业。",
+      "counter_condition": "仅有下斜头脑线不满足两线组合；不把历史作者解释当个人能力实测。",
+      "personal_inference": false
+    }
+  ],
+  "doctrines": [
+    {
+      "id": "D01",
+      "topic": "性情",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF19–32掌型、指掌配合",
+        "PDF60–64头脑线图例"
+      ],
+      "historical_interpretation": "作者用掌型、指掌与拇指配合分类性情，又把头脑线走势联系到构思方式。",
+      "conditions": [
+        "先认整手与各部位的配合",
+        "不同分类体系不可混成一套"
+      ],
+      "application": "可对照作者的分类条件和语境；不生成个人性格、智力或可信度结论。",
+      "personal_inference": false
+    },
+    {
+      "id": "D02",
+      "topic": "职业",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF74右，例103/104、图198/199"
+      ],
+      "historical_interpretation": "艺术、诗文等职业解释同时要求太阳线起点及手形或头脑线配合。",
+      "conditions": [
+        "保留图中全部前提",
+        "太阳线连接对象清楚"
+      ],
+      "application": "说明某图在作者体系中为何被连到某职业主题；不判个人天赋、资格或职业成败。",
+      "personal_inference": false
+    },
+    {
+      "id": "D03",
+      "topic": "健康",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF43、75正文",
+        "PDF155左附录二"
+      ],
+      "historical_interpretation": "正文与附录二对清楚健康线的含义给出相反主张。",
+      "conditions": [
+        "区分章节与流派",
+        "不选一句迎合期待"
+      ],
+      "application": "展示冲突与原作者说法；不据手纹诊病、断体质或判断何时恢复。",
+      "personal_inference": false
+    },
+    {
+      "id": "D04",
+      "topic": "婚育",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF77–78正文结合线",
+        "PDF121附录一一重纹"
+      ],
+      "historical_interpretation": "正文与古诀对结合线数量有不同解释，并非统一的婚姻次数算法。",
+      "conditions": [
+        "掌侧视角与线形边界清楚",
+        "分开作者解释与古诀"
+      ],
+      "application": "解释关系主题及历史规则差异；不判婚次、生育、忠贞或伴侣命运。",
+      "personal_inference": false
+    },
+    {
+      "id": "D05",
+      "topic": "富贵",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF71–74玉柱与太阳",
+        "PDF94、96、99古诀及陈注"
+      ],
+      "historical_interpretation": "作者以线的来路、连接和古符谈事业与名禄；对古代官位和金额说法另有比喻、祝愿等修正。",
+      "conditions": [
+        "线的位置和配合符合原图",
+        "保留作者对古诀的修正"
+      ],
+      "application": "讲明传统财富与认可主题的来由；不量化收入、估值、投资回报或发财年份。",
+      "personal_inference": false
+    },
+    {
+      "id": "D06",
+      "topic": "流年",
+      "source_id": "chen-1994",
+      "locators": [
+        "PDF78结合线年龄段",
+        "PDF132指节每节五岁法"
+      ],
+      "historical_interpretation": "书中并列不同部位的年龄量尺，未统一成可重复的个人断年模型。",
+      "conditions": [
+        "不得把不同量尺拼接",
+        "同一规则先有明确几何定位"
+      ],
+      "application": "说明传统方法与未解决问题；不从未知位置生成实际年份。",
+      "personal_inference": false
+    }
+  ],
+  "evaluation": {
+    "meaning": "案例分类与方法学习，不是预测验证",
+    "trained_model_weights": false,
+    "prospective_accuracy": "NOT_VALIDATED",
+    "personal_examples_in_repository": false
+  }
+}

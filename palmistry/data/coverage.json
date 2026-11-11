@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "whole_book_implemented": false,
   "whole_book_text_reviewed": true,
   "all_figures_visually_verified": false,
@@ -143,12 +143,20 @@
     "rule_replay": "合成输入可测",
     "real_photo_line_recognition": "NOT_TESTED",
     "unseen_case_narrative_quality": "NOT_TESTED",
-    "prediction_accuracy": "NOT_VALIDATED"
+    "prediction_accuracy": "NOT_VALIDATED",
+    "narrative_source_learning": "历史完整叙述、单元字幕与原书图例分别归类；不称完整原系列或事前准确性"
   },
   "all_file_pages_visually_reviewed": true,
   "reviewed_pdf_pages": 169,
   "all_numbered_diagram_groups_catalogued": true,
   "numbered_diagram_groups": 516,
   "shape_records": 514,
-  "visual_verification_meaning": "169个文件页均已看图；不代表被遮挡笔画、每个子图与自动识别均已验。PDF80上方遮挡另记。"
+  "visual_verification_meaning": "169个文件页均已看图；不代表被遮挡笔画、每个子图与自动识别均已验。PDF80上方遮挡另记。",
+  "study_coverage": {
+    "historical_author_accounts": 2,
+    "complete_published_video_units_transcript_read": 2,
+    "shape_counterexamples": 6,
+    "historical_topics": 6,
+    "prospective_client_readings_verified": 0
+  }
 }

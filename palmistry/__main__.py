@@ -6,6 +6,7 @@ from .engine import analyze, knowledge, lookup
 from .iching import all_hexagrams, cast, compose, element_relation, palm_analogy
 from .render import render
 from .forms import get_form
+from .study import study_lookup
 
 
 def main(argv=None):
@@ -20,6 +21,8 @@ def main(argv=None):
     p.add_argument("--context")
     p = sub.add_parser("form", help="查整书图例的中性形态定义")
     p.add_argument("identifier")
+    p = sub.add_parser("study", help="查完整作者案例、原课及有出处的传统主题；不输入个人照片")
+    p.add_argument("query", nargs="?", default="list")
     p = sub.add_parser("hexagram")
     p.add_argument("--lower", required=True)
     p.add_argument("--upper", required=True)
@@ -48,6 +51,8 @@ def main(argv=None):
             result = lookup(args.term, args.context)
         elif args.command == "form":
             result = get_form(args.identifier)
+        elif args.command == "study":
+            result = study_lookup(args.query)
         elif args.command == "hexagram":
             result = compose(args.lower, args.upper)
         elif args.command == "cast":

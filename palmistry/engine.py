@@ -1,6 +1,7 @@
 """Evidence-first, deterministic symbolic rule composition."""
 
 import json
+from itertools import product
 from importlib.resources import files
 
 from .observations import qualify, resolve_hand, validate
@@ -27,6 +28,63 @@ def _match(rule, row):
     return all(row["geometry"].get(key) == value for key, value in rule["when"].items())
 
 
+def _combinations(data, matches, observations, images):
+    """Bind predicates to individual observations, then verify named connections."""
+    result, gaps = [], []
+    observed = {r['id']: r for r in observations}
+    for img in images:
+        same = [r for r in matches if r['image_id'] == img['id']]
+        buckets = {}
+        for row in same:
+            buckets.setdefault(row['rule_id'], []).append(row)
+        for definition in data['combinations']:
+            required = definition['requires']
+            if not all(key in buckets for key in required):
+                continue
+            found, reasons, seen = False, set(), set()
+            for group in product(*(sorted(buckets[key], key=lambda r:r['evidence_ids']) for key in required)):
+                bindings, valid = {}, True
+                for match in group:
+                    row = observed[match['evidence_ids'][0]]
+                    if row['feature'] in bindings and bindings[row['feature']] != row['id']:
+                        reasons.add('同类掌线的多个条件未落在同一条观察上')
+                        valid = False
+                        break
+                    bindings[row['feature']] = row['id']
+                if not valid:
+                    continue
+                links = []
+                for obs_id in sorted(set(bindings.values())):
+                    row = observed[obs_id]
+                    start = row['geometry'].get('start', '')
+                    parent_feature = start[:-5] if start.endswith('_line') else None
+                    if parent_feature not in bindings:
+                        continue
+                    parent_id = bindings[parent_feature]
+                    ref = row['geometry'].get('origin_ref')
+                    candidates = [r for r in observations if r['image_id']==img['id'] and r['status']=='recognized' and r['kind']=='line' and r['feature']==parent_feature]
+                    if (ref is not None and ref != parent_id) or (ref is None and (len(candidates)!=1 or candidates[0]['id']!=parent_id)):
+                        reasons.add('连接对象有多个候选；须标明实际相接的掌线')
+                        valid = False
+                        break
+                    links.append({'child':obs_id,'parent':parent_id,'basis':'explicit-origin-ref' if ref else 'unique-recognized-parent'})
+                evidence = sorted(set(bindings.values()))
+                if not valid or len(evidence) < definition['minimum_observations']:
+                    continue
+                signature = tuple(evidence)
+                if signature in seen:
+                    continue
+                seen.add(signature)
+                found = True
+                result.append({**definition,'image_id':img['id'],'evidence_ids':evidence,'bindings':bindings,
+                               'connections':links,'claim_type':'system-symbolic-synthesis',
+                               'source_type':'original-combination-not-book-quote','scope':'observed-segments'})
+            if not found and reasons:
+                gaps.append({'image_id':img['id'],'combination_id':definition['id'],'reason':'；'.join(sorted(reasons))})
+    result.sort(key=lambda c:(-len(c['requires']),c['image_id'],c['id'],c['evidence_ids']))
+    return result, gaps
+
+
 def analyze(payload):
     validate(payload)
     data = knowledge()
@@ -50,18 +108,8 @@ def analyze(payload):
                                 "evidence_ids": [row["id"]], "topic": rule["topic"], "theme": rule["theme"],
                                 "text": rule["text"], "source": rule["source"], "priority": rule["priority"],
                                 "claim_type": "traditional-symbolism"})
-    combinations = []
-    for img in images:
-        same = [r for r in matches if r["image_id"] == img["id"]]
-        by_id = {r["rule_id"]: r for r in same}
-        for combination in data["combinations"]:
-            if set(combination["requires"]) <= set(by_id):
-                evidence = sorted({e for key in combination["requires"] for e in by_id[key]["evidence_ids"]})
-                # Same observation cannot masquerade as multiple independently confirmed features.
-                if len(evidence) < combination["minimum_observations"]:
-                    continue
-                combinations.append({**combination, "image_id": img["id"], "evidence_ids": evidence,
-                                     "claim_type": "system-symbolic-synthesis", "source_type": "original-combination-not-book-quote"})
+    combinations, combination_gaps = _combinations(data, matches, rows, images)
+    unknowns.extend(combination_gaps)
     comparisons = []
     image_map = {img["id"]: img for img in images}
     for feature in sorted({r["feature"] for r in rows}):
@@ -86,14 +134,15 @@ def analyze(payload):
             seen.add(key)
     present_rules = {r["rule_id"] for r in matches}
     gaps = [{"rule_id": r["id"], "requires": r["when"]} for r in data["rules"] if r["id"] not in present_rules]
-    combinations.sort(key=lambda c:-len(c["requires"]))
     return {"version": __version__, "knowledge_version": data["version"], "method": "observation-led-palm-symbolism",
             "focus": focus, "dominant_hand": payload.get("dominant_hand", "unknown"), "images": images,
             "observations": rows, "matches": matches, "themes": themes, "combinations": combinations,
+            "combination_gaps": combination_gaps,
             "shape_aliases": semantic_aliases(rows),
             "comparisons": comparisons, "unknowns": unknowns,
             "coverage": {"matched_rule_count": len(present_rules), "unmatched_rules": gaps,
                          "meaning": "规则命中情况，不是识图或预测准确率"},
             "capabilities": {"automatic_crease_detection": False, "image_labels_verified_by_pixels": False,
-                             "medical_or_personality_inference": False, "forecast_accuracy_validated": False},
+                             "medical_or_personality_inference": False, "forecast_accuracy_validated": False,
+                             "calendar_timing_from_palm": False, "income_amount_from_palm": False},
             "storage": "none"}

@@ -8,7 +8,7 @@ import unittest
 
 from palmistry.engine import analyze, knowledge, lookup
 from palmistry.observations import ObservationError
-from palmistry.render import render
+from palmistry.render import render, reading_sections
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -226,8 +226,10 @@ class ReadingTests(unittest.TestCase):
         self.assertNotIn('规则依据（供复核）',plain)
 
     def test_reader_does_not_repeat_one_observation_as_separate_findings(self):
-        plain=render(analyze(sample()))
-        self.assertEqual(plain.count('看到的依据：'),2)
+        sections=reading_sections(analyze(sample()))
+        evidence=[obs for section in sections for obs in section['evidence_ids']]
+        self.assertEqual(set(evidence),{'demo_fate','demo_sun'})
+        self.assertEqual(len(evidence),len(set(evidence)))
 
     def test_active_rules_have_positive_behavioral_cases(self):
         cases = [
@@ -236,6 +238,7 @@ class ReadingTests(unittest.TestCase):
             ('head',{'path':'across_palm','start':'thumb_index','direction':'transverse'},{'H02'}),
             ('heart',{'path':'under_finger_bases','continuity':'continuous','upward_branch':True},{'L03','R01','R02'}),
             ('fate',{'start':'life_line','end':'middle_base','double':True,'upward_branch':True},{'L04','F01','F03','P02'}),
+            ('fate',{'end':'middle_base','continuity':'overlapping','overlap':True},{'L04','F06'}),
             ('fate',{'start':'moon_region','end':'middle_base','continuity':'continuous'},{'F02','F05'}),
             ('fate',{'end':'middle_base','continuity':'gap','gap_confirmed':True,'overlap':False},{'F04'}),
             ('sun',{'start':'life_line','end':'ring_base','double':True},{'L05','S01','P03'}),

@@ -101,6 +101,47 @@
       "url": "https://github.com/ShousenZHANG/chinese-fortune/blob/main/references/10-shouxiang.md",
       "read_scope": "44行全文",
       "use": "只读比较术语和语境规范，未安装/未复制代码"
+    },
+    {
+      "id": "cheiro-1916",
+      "type": "original-author-public-domain-book",
+      "title": "Palmistry for All",
+      "edition": "G.P. Putnam’s Sons, 1916; Twenty-second Impression",
+      "url": "https://www.gutenberg.org/cache/epub/20480/pg20480-images.html",
+      "read_scope": "Introduction xv–xviii与案例相关条件章；署名整手印已核",
+      "use": "学习整手与多线组合；历史回忆不验证个人预测"
+    },
+    {
+      "id": "cheiro-1912",
+      "type": "original-author-historical-recollection",
+      "title": "Cheiro’s Memoirs",
+      "edition": "William Rider and Son Ltd, 1912",
+      "url": "https://archive.org/details/cheirosmemoirsre0000chei",
+      "read_scope": "VI章39–46；46页视觉核对；掌图跨1897版配齐",
+      "use": "学习相同线形在不同整手条件下改变解释，不采用疾病或生死叙事"
+    },
+    {
+      "id": "sari-lesson-2",
+      "type": "original-author-public-video-unit",
+      "url": "https://www.youtube.com/watch?v=aw0JkB0RR-U",
+      "author_index": "https://destinypalmistry.com/palmistry-video-list-by-sari-a-puhakka/",
+      "read_scope": "发布单元4:43全自动英语字幕；未连续看完或听完音轨",
+      "use": "学习组合变量、减弱条件与分类澄清；不复制字幕或课件，不采纳个人性情测量"
+    },
+    {
+      "id": "sari-booklet",
+      "type": "original-author-public-teaching-booklet",
+      "url": "https://destinypalmistry.com/wp-content/uploads/2019/09/hand-reading-tips-new.pdf",
+      "read_scope": "13页提取文本全读，未逐页核图",
+      "use": "学习反例；不分发原PDF或当作医疗、人格或收益证据"
+    },
+    {
+      "id": "sari-fate-broken",
+      "type": "original-author-public-video-unit",
+      "url": "https://www.youtube.com/watch?v=ralXvqzeDXU",
+      "author_index": "https://destinypalmistry.com/palmistry-video-list-by-sari-a-puhakka/",
+      "read_scope": "视频8:12；完整可用自动英语字幕0:04–8:02已读，未连续观看全片或核所有课件图",
+      "use": "搭接/空缺/横切与后续分别判断；作者heart/head自我纠正保留，不作个人事件预测"
     }
   ],
   "code_license": "尚未选择对外分发许可证；原书不因项目创建而取得再分发权"

@@ -2,6 +2,7 @@
 
 import json
 from importlib.resources import files
+from .study import study_lookup
 
 
 def figure_forms():
@@ -14,6 +15,11 @@ def all_forms():
     return data['main_foundation_figures']+data['main_examples']+data['appendix_one']+data['appendix_two']['forms']+data['essay_figures']+intros
 
 
+def _form_result(row, **extra):
+    return {'status':'found','record':row,'mode':'shape-definition-not-personal-forecast',
+            'historical_context':study_lookup(row['id'])['records'],**extra}
+
+
 def get_form(identifier):
     if ':' in identifier:
         unit,_,number=identifier.partition(':')
@@ -22,16 +28,16 @@ def get_form(identifier):
             if unit=='main':
                 for row in all_forms():
                     if row['id'].startswith('B-') and row.get('figure')==n:
-                        return {'status':'found','record':row,'mode':'shape-definition-not-personal-forecast'}
+                        return _form_result(row)
                     if row['id'].startswith('E') and any(f['number']==n for f in row['source']['figures']):
-                        return {'status':'found','record':row,'selected_figure':n,'mode':'shape-definition-not-personal-forecast'}
+                        return _form_result(row,selected_figure=n)
             mapped={'appendix1':f'A1-{n:02}','appendix2':f'A2-{n:03}','essay':f'P-{n:02}'}.get(unit)
             if mapped:
                 return get_form(mapped)
     key=identifier.upper()
     for row in all_forms():
         if row['id']==key:
-            return {'status':'found','record':row,'mode':'shape-definition-not-personal-forecast'}
+            return _form_result(row)
     return {'status':'unknown','id':identifier}
 
 

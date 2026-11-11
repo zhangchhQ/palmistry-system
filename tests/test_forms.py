@@ -5,7 +5,7 @@ import unittest
 
 from palmistry.engine import analyze, lookup
 from palmistry.forms import all_forms, figure_forms, get_form
-from palmistry.render import render
+from palmistry.render import render, reading_sections
 
 
 def payload():
@@ -92,7 +92,8 @@ class FormTests(unittest.TestCase):
         self.assertEqual(result['combinations'][0]['id'],'C05')
         self.assertEqual(len(result['combinations'][0]['evidence_ids']),2)
         text=render(result)
-        self.assertEqual(text.count('看到的依据：'),2)
+        self.assertEqual(reading_sections(result)[0]['kind'],'combination')
+        self.assertEqual(set(reading_sections(result)[0]['evidence_ids']),{'demo_fate','demo_sun'})
         self.assertEqual(text.count('按传统象征读法'),1)
         self.assertIn('月丘',text)
         self.assertNotIn('PDF',text)

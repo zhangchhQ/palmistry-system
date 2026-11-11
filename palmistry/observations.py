@@ -13,7 +13,7 @@ FEATURES = {
 GEOMETRY = {
     "start", "end", "path", "direction", "continuity", "parallel_to", "parent_line",
     "independent", "closed", "edge_count", "stroke_count", "common_intersection",
-    "gap_confirmed", "overlap", "shape", "scheme", "relief", "upward_branch", "double", "region",
+    "gap_confirmed", "overlap", "shape", "scheme", "relief", "upward_branch", "double", "region", "origin_ref",
 }
 BOOL_FIELDS = {"independent", "closed", "common_intersection", "gap_confirmed", "overlap", "upward_branch", "double"}
 INT_FIELDS = {"edge_count", "stroke_count"}
@@ -22,7 +22,7 @@ STR_VALUES = {
     "end": {"middle_base", "middle_finger", "ring_base", "little_base", "index_base", "index_middle_gap", "palm_center", "wrist", "moon_region", "head_line", "heart_line", "life_line", "unknown"},
     "path": {"around_thumb_ball", "across_palm", "under_finger_bases", "toward_middle", "toward_ring", "beside_life", "small_finger_edge", "under_upper_crease", "lower_outer_palm", "finger_joint", "unknown"},
     "direction": {"transverse", "descending_outer", "ascending", "curved", "wavy", "unknown"},
-    "continuity": {"continuous", "gap", "chain", "partial", "unknown"},
+    "continuity": {"continuous", "gap", "overlapping", "chain", "partial", "unknown"},
     "parallel_to": {"life", "head", "heart", "fate", "sun", "unknown"},
     "parent_line": {"life", "head", "heart", "fate", "sun", "none", "unknown"},
     "shape": {"square", "oblong", "oval", "tapered", "mixed", "knotted", "spatulate", "conical", "pointed", "thin", "concave", "straight", "curved", "parallel_bundle", "unknown"},
@@ -95,12 +95,27 @@ def validate(payload):
                 raise ObservationError("basis须为observed/hypothesized")
             _fields(obs["geometry"], GEOMETRY, set(), "几何描述")
             for key, value in obs["geometry"].items():
+                if key == "origin_ref":
+                    _identifier(value, "origin_ref")
                 if key in BOOL_FIELDS and type(value) is not bool:
                     raise ObservationError(f"{key}必须为布尔值")
                 if key in INT_FIELDS and (type(value) is not int or not 0 <= value <= 12):
                     raise ObservationError(f"{key}必须为0至12的整数")
                 if key in STR_VALUES and (not isinstance(value, str) or value not in STR_VALUES[key]):
                     raise ObservationError(f"{key}取值无效")
+    located = {obs['id']: (img['id'], obs) for img in payload['images'] for obs in img['observations']}
+    for img in payload['images']:
+        for obs in img['observations']:
+            ref = obs['geometry'].get('origin_ref')
+            if ref is None:
+                continue
+            if ref not in located or ref == obs['id']:
+                raise ObservationError('origin_ref须指向另一条已提供的观察')
+            image_id, parent = located[ref]
+            if image_id != img['id'] or obs['kind'] != 'line' or parent['kind'] != 'line':
+                raise ObservationError('origin_ref只能连接同一张照片中的掌线')
+            if obs['geometry'].get('start') != parent['feature'] + '_line':
+                raise ObservationError('origin_ref与起点所指掌线不一致')
     return payload
 
 
@@ -135,6 +150,8 @@ def qualify(img, obs):
             return "descriptive", "辅线先作位置观察，不据名称套用人生断语"
         if g.get("continuity") == "gap" and not (g.get("gap_confirmed") is True and g.get("overlap") is False):
             return "unresolved", "所谓中断尚未排除阴影、遮挡或搭接"
+        if g.get('continuity') == 'overlapping' and g.get('overlap') is not True:
+            return 'unresolved', '搭接须确认实际重叠，不把空缺改称搭接'
         return "recognized", "位置与候选线定义相符"
     if k == "symbol":
         if f in {"triangle", "square"}:

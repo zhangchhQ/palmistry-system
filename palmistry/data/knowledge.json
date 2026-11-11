@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "rules": [
     {
       "id": "L01",
@@ -145,13 +145,14 @@
         "continuity": "continuous"
       },
       "topic": "career",
-      "theme": "主线的延续",
-      "text": "这段线连贯，象意偏向主轴的延续；起点与辅线会补充它靠什么向前。",
+      "theme": "已见线段的连续",
+      "text": "这段玉柱线在已看清的范围内连贯。连续这一项只描述该段形态，起点与连接关系另看。",
       "source": {
         "id": "chen-1994",
         "locator": "PDF70右，例83—84"
       },
-      "priority": 35
+      "priority": 35,
+      "scope": "observed-segment-only"
     },
     {
       "id": "S01",
@@ -225,13 +226,14 @@
         "direction": "descending_outer"
       },
       "topic": "general",
-      "theme": "向内展开的构思",
-      "text": "向小指侧下斜的走势，在传统图式里接向构思、想象与内在世界，象意更有向里展开的画面。",
+      "theme": "头脑线向小指侧下行",
+      "text": "原书把这类走势放在构思与想象的传统主题下；职业图例另有太阳线起点等配合条件。",
       "source": {
         "id": "chen-1994",
         "locator": "PDF60—64"
       },
-      "priority": 45
+      "priority": 45,
+      "scope": "attributed-traditional-theme"
     },
     {
       "id": "H02",
@@ -364,6 +366,24 @@
         "locator": "PDF50—52"
       },
       "priority": 15
+    },
+    {
+      "id": "F06",
+      "kind": "line",
+      "feature": "fate",
+      "when": {
+        "continuity": "overlapping",
+        "overlap": true
+      },
+      "topic": "career",
+      "theme": "前后段搭接",
+      "text": "前后两段有已确认的重叠。原课把搭接与真正空缺分开，先看重叠位置，再看后段走向；这一项记录的是已见连接方式。",
+      "source": {
+        "id": "sari-fate-broken",
+        "locator": "4:30–5:58，搭接与空缺两段讲解"
+      },
+      "priority": 60,
+      "scope": "observed-segment-only"
     }
   ],
   "combinations": [
@@ -374,7 +394,14 @@
         "S02"
       ],
       "minimum_observations": 2,
-      "text": "这组象的主调是：靠合作打开局面，再把做出的东西带到人前。玉柱线从月丘起，传统上先看外部机会；太阳线又从它接出去，便把做事和被看见连在了一起。接下来读得更细，要看这两处怎样衔接。"
+      "text": "陈氏把月丘起线联系到外部来路，把太阳线联系到成果与认可。两条线明确接在一起，所以这组图沿着来路讲到成果。",
+      "title": "外部来路与成果接在一起",
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "连续只描述已见线段",
+        "不生成个人年份、收入、人格或诊断结论"
+      ]
     },
     {
       "id": "C02",
@@ -383,7 +410,14 @@
         "S02"
       ],
       "minimum_observations": 2,
-      "text": "这组象讲的是：先有积累，再把成果做出来。玉柱线从生命线起，太阳线又接在它上面，前面的基础和后面的呈现连在了一起。读这组象，要看已有积累怎样托起下一步。"
+      "text": "这组图的来路落在生命线，按陈氏读法从已有基础讲起；太阳线又接上玉柱线，解释就顺着这个接头走到成果与认可。",
+      "title": "从已有根基讲到成果",
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "连续只描述已见线段",
+        "不生成个人年份、收入、人格或诊断结论"
+      ]
     },
     {
       "id": "C03",
@@ -392,7 +426,14 @@
         "S02"
       ],
       "minimum_observations": 2,
-      "text": "这组象有转折，也有接续。事业主线分了段，太阳线还和它相连，可以读成：中间换一程，后面还有做出成果的空间。最关键的是前后两段怎样接，接头没看清，就先不把转折说成具体年份和事情。"
+      "text": "玉柱线上有已核实的间断，太阳线同时与具体玉柱相接。断在哪里、太阳线接在哪里，要分别交代；当前组合没有前后段先败后成的时间证据。",
+      "title": "间断与连接分别看",
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "连续只描述已见线段",
+        "不生成个人年份、收入、人格或诊断结论"
+      ]
     },
     {
       "id": "C04",
@@ -401,7 +442,14 @@
         "S02"
       ],
       "minimum_observations": 2,
-      "text": "这组象先看两条路并着走，再看成果接在哪条路上。两路各有走向，太阳线具体接在哪一支，会改变下一层读法。这个接头值得先看清。"
+      "text": "玉柱形态可见双重路径，太阳线又与这一组纵纹相接。应先分清太阳线具体接在哪一支，再说明两路的关系。",
+      "title": "两路并行，呈现线另看接头",
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "连续只描述已见线段",
+        "不生成个人年份、收入、人格或诊断结论"
+      ]
     },
     {
       "id": "C05",
@@ -411,7 +459,34 @@
         "F05"
       ],
       "minimum_observations": 2,
-      "text": "这组象的主调是：靠合作打开局面，沿着一件事持续做，慢慢做出自己的招牌。玉柱线从月丘起，传统上先看外部机会；中间清楚的部分连贯，带着接续往前走的意思；太阳线再从它接出去，就把做事和被看见连在了一起。合起来看，是先借力起步，再把成果做出来。"
+      "text": "陈氏把月丘起线联系到外部来路，把太阳线联系到成果与认可。这里两条线接在一起，因此这组图读作“外缘入路，做事见名”。",
+      "title": "先看外部机会，再看做出的成果",
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "连续只描述已见线段",
+        "不生成个人年份、收入、人格或诊断结论"
+      ]
+    },
+    {
+      "id": "C06",
+      "requires": [
+        "H01",
+        "S03"
+      ],
+      "minimum_observations": 2,
+      "title": "下斜头脑线与太阳线相接",
+      "text": "太阳线从这条向小指侧下行的头脑线发出。陈氏在该图中把两条线合看，传统主题落在构思通向作品与呈现；决定这组解释的是明确的起点连接。",
+      "source": {
+        "id": "chen-1994",
+        "locator": "PDF74右，例104、图199"
+      },
+      "forecast_scope": "none",
+      "requires_same_observation_per_feature": true,
+      "limits": [
+        "单有下斜头脑线不等于该组合成立",
+        "不判定个人天赋、职业成败或收益"
+      ]
     }
   ],
   "terms": [
@@ -821,5 +896,5 @@
     "模糊不等于没有",
     "不以八字、经历和用户期待补造纹路"
   ],
-  "rule_scope": "23条活动规则＋5种组合语法；整书形态图组另存figure_forms.json。图组归纳不等于自动识图或预测断语全部启用。"
+  "rule_scope": "24条形态规则、6条有绑定条件的传统组合；连续线段不推出未来稳定；历史性情/职业/健康/婚育/富贵另由study查询，不进入个人测量。"
 }
